@@ -1,0 +1,20 @@
+# Edge Recycle Classifier
+
+## Overview
+Lightweight image classifier for recyclable items, converted to TFLite and tested on Raspberry Pi.
+
+## Files
+- src/train.py - training script
+- src/convert_tflite.py - conversion & quantization
+- src/tflite_infer.py - inference on edge device
+- models/ - saved models and tflite files
+- notebooks/ - Jupyter notebooks for EDA & training
+
+## Quick start (Colab)
+1. Upload dataset to `data/` arranged by class.
+2. Run `train.py` or open `notebooks/train.ipynb`.
+3. Convert: `python src/convert_tflite.py`
+4. Deploy `models/recycle_model_quant.tflite` and `src/tflite_infer.py` to Raspberry Pi.
+
+## Dependencies
+tensorflow, tflite-runtime, pillow, numpy, scikit-learn
